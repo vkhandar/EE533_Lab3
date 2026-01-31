@@ -1,0 +1,51 @@
+Command line:
+   ./ids_tb_isim_beh.exe
+     -intstyle  ise
+     -ipchost  localhost
+     -ipcport  1054
+
+Sat Jan 31 01:42:50 2026
+
+Total Line Count : 2588
+
+ Elaboration Time: 0.03125 sec
+
+ Current Memory Usage: 149.053 Meg
+
+ Total Signals          : 5288
+ Total Nets             : 3321
+ Total Signal Drivers   : 1515
+ Total Blocks           : 1118
+ Total Primitive Blocks : 974
+ Total Processes        : 2195
+ Total Traceable Variables  : 612
+ Total Scalar Nets and Variables : 5920
+ntrace select -o on -n /ids_tb/in_data 
+ntrace select -o on -n /ids_tb/in_ctrl 
+ntrace select -o on -n /ids_tb/in_wr 
+ntrace select -o on -n /ids_tb/in_rdy 
+ntrace select -o on -n /ids_tb/out_data 
+ntrace select -o on -n /ids_tb/out_ctrl 
+ntrace select -o on -n /ids_tb/out_wr 
+ntrace select -o on -n /ids_tb/out_rdy 
+ntrace select -o on -n /ids_tb/reg_req_in 
+ntrace select -o on -n /ids_tb/reg_ack_in 
+ntrace select -o on -n /ids_tb/reg_rd_wr_l_in 
+ntrace select -o on -n /ids_tb/reg_addr_in 
+ntrace select -o on -n /ids_tb/reg_data_in 
+ntrace select -o on -n /ids_tb/reg_src_in 
+ntrace select -o on -n /ids_tb/reg_req_out 
+ntrace select -o on -n /ids_tb/reg_ack_out 
+ntrace select -o on -n /ids_tb/reg_rd_wr_l_out 
+ntrace select -o on -n /ids_tb/reg_addr_out 
+ntrace select -o on -n /ids_tb/reg_data_out 
+ntrace select -o on -n /ids_tb/reg_src_out 
+ntrace select -o on -n /ids_tb/reset 
+ntrace select -o on -n /ids_tb/clk 
+ntrace select -o on -n /ids_tb/period 
+ntrace select -o on -n /ids_tb/duty_cycle 
+ntrace select -o on -n /ids_tb/offset 
+ntrace start 
+isimrun 1000 ns 
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.

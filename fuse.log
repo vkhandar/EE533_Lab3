@@ -1,0 +1,148 @@
+Determining compilation order of HDL files
+Analyzing Verilog file comparator.vf
+Analyzing Verilog file wordmatch.vf
+Analyzing Verilog file reg9B.vf
+Analyzing Verilog file busmerge.v
+Analyzing Verilog file dropfifo.vf
+Analyzing Verilog file detect7B.vf
+Analyzing Verilog file ids_sim.v
+WARNING:HDLCompiler:693 - "ids_sim.v" Line 92. Parameter declaration becomes
+   local in ids_sim with formal parameter declaration list
+WARNING:HDLCompiler:693 - "ids_sim.v" Line 93. Parameter declaration becomes
+   local in ids_sim with formal parameter declaration list
+WARNING:HDLCompiler:693 - "ids_sim.v" Line 94. Parameter declaration becomes
+   local in ids_sim with formal parameter declaration list
+Analyzing Verilog file C:/Xilinx/10.1/ISE/verilog/src/glbl.v
+Analyzing VHDL file ipcore.vhd
+Restoring VHDL parse-tree ieee.std_logic_1164 from
+c:/xilinx/10.1/ise/vhdl/hdp/nt/ieee/std_logic_1164.vdb
+Restoring VHDL parse-tree std.standard from
+c:/xilinx/10.1/ise/vhdl/hdp/nt/std/standard.vdb
+Restoring VHDL parse-tree xilinxcorelib.blkmemdp_v6_3 from
+c:/xilinx/10.1/ise/vhdl/hdp/nt/xilinxcorelib/xilinxcorelib.vdbl
+Restoring VHDL parse-tree ieee.vital_timing from
+c:/xilinx/10.1/ise/vhdl/hdp/nt/ieee/vital_timing.vdb
+Restoring VHDL parse-tree std.textio from
+c:/xilinx/10.1/ise/vhdl/hdp/nt/std/textio.vdb
+Restoring VHDL parse-tree xilinxcorelib.ul_utils from
+c:/xilinx/10.1/ise/vhdl/hdp/nt/xilinxcorelib/xilinxcorelib.vdbl
+Restoring VHDL parse-tree xilinxcorelib.blkmemdp_mem_init_file_pack_v6_3 from
+c:/xilinx/10.1/ise/vhdl/hdp/nt/xilinxcorelib/xilinxcorelib.vdbl
+Restoring VHDL parse-tree xilinxcorelib.blkmemdp_pkg_v6_3 from
+c:/xilinx/10.1/ise/vhdl/hdp/nt/xilinxcorelib/xilinxcorelib.vdbl
+Analyzing VHDL file ids_tb.vhw
+Restoring VHDL parse-tree ieee.std_logic_textio from
+c:/xilinx/10.1/ise/vhdl/hdp/nt/ieee/std_logic_textio.vdb
+Restoring VHDL parse-tree ieee.std_logic_arith from
+c:/xilinx/10.1/ise/vhdl/hdp/nt/ieee/std_logic_arith.vdb
+Restoring VHDL parse-tree ieee.std_logic_unsigned from
+c:/xilinx/10.1/ise/vhdl/hdp/nt/ieee/std_logic_unsigned.vdb
+Saving VHDL parse-tree work.ipcore into
+c:/xilinx/10.1/ise/iseexamples/lab3/isim/work/ipcore.vdb
+Saving VHDL parse-tree work.ids_tb into
+c:/xilinx/10.1/ise/iseexamples/lab3/isim/work/ids_tb.vdb
+Starting static elaboration
+Restoring Verilog parse-tree unisims_ver.FDCE from
+c:/xilinx/10.1/ise/verilog/hdp/nt/unisims_ver/unisims_ver.sdbl
+Restoring Verilog parse-tree unisims_ver.FMAP from
+c:/xilinx/10.1/ise/verilog/hdp/nt/unisims_ver/unisims_ver.sdbl
+Restoring Verilog parse-tree unisims_ver.OR2 from
+c:/xilinx/10.1/ise/verilog/hdp/nt/unisims_ver/unisims_ver.sdbl
+Restoring Verilog parse-tree unisims_ver.OR4 from
+c:/xilinx/10.1/ise/verilog/hdp/nt/unisims_ver/unisims_ver.sdbl
+Restoring Verilog parse-tree unisims_ver.AND4 from
+c:/xilinx/10.1/ise/verilog/hdp/nt/unisims_ver/unisims_ver.sdbl
+Restoring Verilog parse-tree unisims_ver.XNOR2 from
+c:/xilinx/10.1/ise/verilog/hdp/nt/unisims_ver/unisims_ver.sdbl
+Restoring Verilog parse-tree unisims_ver.AND2 from
+c:/xilinx/10.1/ise/verilog/hdp/nt/unisims_ver/unisims_ver.sdbl
+Restoring Verilog parse-tree unisims_ver.OR2B1 from
+c:/xilinx/10.1/ise/verilog/hdp/nt/unisims_ver/unisims_ver.sdbl
+Restoring Verilog parse-tree unisims_ver.AND3B1 from
+c:/xilinx/10.1/ise/verilog/hdp/nt/unisims_ver/unisims_ver.sdbl
+Restoring Verilog parse-tree unisims_ver.FD from
+c:/xilinx/10.1/ise/verilog/hdp/nt/unisims_ver/unisims_ver.sdbl
+Restoring Verilog parse-tree unisims_ver.AND2B1 from
+c:/xilinx/10.1/ise/verilog/hdp/nt/unisims_ver/unisims_ver.sdbl
+Restoring Verilog parse-tree unisims_ver.AND3B2 from
+c:/xilinx/10.1/ise/verilog/hdp/nt/unisims_ver/unisims_ver.sdbl
+Restoring Verilog parse-tree unisims_ver.XOR2 from
+c:/xilinx/10.1/ise/verilog/hdp/nt/unisims_ver/unisims_ver.sdbl
+Restoring Verilog parse-tree unisims_ver.AND3 from
+c:/xilinx/10.1/ise/verilog/hdp/nt/unisims_ver/unisims_ver.sdbl
+Restoring Verilog parse-tree unisims_ver.VCC from
+c:/xilinx/10.1/ise/verilog/hdp/nt/unisims_ver/unisims_ver.sdbl
+Restoring Verilog parse-tree unisims_ver.AND5 from
+c:/xilinx/10.1/ise/verilog/hdp/nt/unisims_ver/unisims_ver.sdbl
+Restoring Verilog parse-tree unisims_ver.FDC from
+c:/xilinx/10.1/ise/verilog/hdp/nt/unisims_ver/unisims_ver.sdbl
+WARNING:HDLCompiler:559 - "ids_sim.v" Line 112. Instantiating unknown module
+   fallthrough_small_fifo
+WARNING:HDLCompiler:321 -
+   "K:/IP0_K.14/env/Databases/ip/export/rtf/vhdl/src/XilinxCoreLib/blkmemdp_v6_3
+   .vhd" Line 383. Comparison between unequal length arrays always returns FALSE
+WARNING:HDLCompiler:919 - "dropfifo.vf" Line 589. Size mismatch in mixed
+   language port association, vhdl port addra
+WARNING:HDLCompiler:559 - "ids_sim.v" Line 152. Instantiating unknown module
+   generic_regs
+WARNING:HDLCompiler:918 - "ids_tb.vhw" Line 86. Size mismatch in mixed language
+   port association, verilog port in_data
+Completed static elaboration
+Fuse Memory Usage: 57224 Kb
+Fuse CPU Usage: 437 ms
+Using precompiled package standard from library std
+Using precompiled package textio from library std
+Using precompiled package std_logic_1164 from library ieee
+Using precompiled package std_logic_textio from library ieee
+Using precompiled package std_logic_arith from library ieee
+Using precompiled package std_logic_unsigned from library ieee
+Using precompiled package vital_timing from library ieee
+Compiling module glbl
+Compiling module busmerge
+Compiling module FDCE(INIT=1'b0)
+Compiling module FD8CE_MXILINX_reg9B
+Compiling module FD16CE_MXILINX_reg9B
+Compiling module reg9B
+Compiling module FMAP
+Compiling module OR2
+Compiling module OR4
+Compiling module OR8_MXILINX_wordmatch
+Compiling module AND4
+Compiling module XNOR2
+Compiling module AND2
+Compiling module COMP8_MXILINX_comparator
+Compiling module OR2B1
+Compiling module AND7_MXILINX_comparator
+Compiling module comparator
+Compiling module wordmatch
+Compiling module AND3B1
+Compiling module FD(INIT=1'b0)
+Compiling module detect7B
+Compiling module AND2B1
+Compiling module FD8CE_MXILINX_dropfifo
+Compiling module COMP8_MXILINX_dropfifo
+Compiling module AND3B2
+Compiling module M2_1_MXILINX_dropfifo
+Compiling module XOR2
+Compiling module FTCLEX_MXILINX_dropfifo
+Compiling module AND3
+Compiling module VCC
+Compiling module AND5
+Compiling module CB8CLE_MXILINX_dropfifo
+Compiling module FTCE_MXILINX_dropfifo
+Compiling module CB8CE_MXILINX_dropfifo
+Compiling module FDC(INIT=1'b0)
+Compiling module dropfifo
+Compiling module ids_sim
+Compiling package ul_utils
+Compiling package blkmemdp_mem_init_file_pack_v6_3
+Compiling package blkmemdp_pkg_v6_3
+Compiling architecture behavioral of entity blkmemdp_v6_3
+[\blkmemdp_v6_3(8,8,"0",256,256,0...]
+Compiling architecture ipcore_a of entity ipcore
+Compiling architecture testbench_arch of entity ids_tb
+Compiled 15 VHDL Units
+Compiled 37 Verilog Units
+Built simulation executable ids_tb_isim_beh.exe
+Fuse Memory Usage: 59532 Kb
+Fuse CPU Usage: 781 ms

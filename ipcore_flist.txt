@@ -1,0 +1,11 @@
+# Output products list for <ipcore>
+ipcore.asy
+ipcore.ngc
+ipcore.sym
+ipcore.v
+ipcore.veo
+ipcore.vhd
+ipcore.vho
+ipcore.xco
+ipcore_flist.txt
+ipcore_xmdf.tcl
