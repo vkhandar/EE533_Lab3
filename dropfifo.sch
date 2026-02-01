@@ -13,36 +13,25 @@ BEGIN SCHEMATIC
         SIGNAL XLXN_5
         SIGNAL XLXN_6
         SIGNAL XLXN_8
-        SIGNAL XLXN_45
         SIGNAL fiforead
-        SIGNAL XLXN_47(7:0)
         SIGNAL waddr(7:0)
         SIGNAL raddr(7:0)
-        SIGNAL XLXN_50(7:0)
-        SIGNAL XLXN_51(7:0)
         SIGNAL XLXN_15
         SIGNAL XLXN_16(7:0)
-        SIGNAL XLXN_54(7:0)
         SIGNAL XLXN_18
         SIGNAL in_fifo(71:0)
         SIGNAL drop_pkt
-        SIGNAL XLXN_58
-        SIGNAL XLXN_59
         SIGNAL clk
-        SIGNAL XLXN_61
-        SIGNAL XLXN_62
-        SIGNAL XLXN_63
         SIGNAL rst
         SIGNAL out_fifo(71:0)
-        SIGNAL XLXN_66
         SIGNAL XLXN_7
         SIGNAL in_fifo0(71:0)
         SIGNAL XLXN_35
-        SIGNAL XLXN_70
         SIGNAL XLXN_36
-        SIGNAL XLXN_72
         SIGNAL XLXN_37
         SIGNAL valid_data
+        SIGNAL XLXN_74
+        SIGNAL XLXN_75
         PORT Input firstword
         PORT Input lastword
         PORT Input fifowrite
@@ -343,10 +332,10 @@ BEGIN SCHEMATIC
             WIRE 2160 2784 2192 2784
             WIRE 2160 2640 2160 2784
             WIRE 2160 2640 4032 2640
-            WIRE 3968 2256 4080 2256
+            WIRE 3968 2256 4032 2256
+            WIRE 4032 2256 4080 2256
             WIRE 4080 2256 4880 2256
             WIRE 4032 2256 4032 2640
-            WIRE 4032 2256 4080 2256
             BEGIN DISPLAY 1424 2512 ATTR Name
                 ALIGNMENT SOFT-BCENTER
             END DISPLAY
@@ -366,13 +355,6 @@ BEGIN SCHEMATIC
             END DISPLAY
         END BRANCH
         INSTANCE XLXI_11 3376 3072 R0
-        INSTANCE XLXI_12 3424 3504 R0
-        BEGIN BRANCH XLXN_15
-            WIRE 3136 2880 3168 2880
-            WIRE 3168 2880 3376 2880
-            WIRE 3168 2880 3168 3248
-            WIRE 3168 3248 3424 3248
-        END BRANCH
         BEGIN BRANCH XLXN_16(7:0)
             WIRE 1888 2512 2048 2512
             WIRE 2048 2512 2048 3520
@@ -417,9 +399,9 @@ BEGIN SCHEMATIC
             WIRE 3216 2512 3584 2512
             WIRE 3216 2512 3216 2656
             WIRE 3216 2656 3216 2976
-            WIRE 3216 2976 3216 3376
-            WIRE 3216 3376 3424 3376
             WIRE 3216 2976 3296 2976
+            WIRE 3216 2976 3216 3424
+            WIRE 3216 3424 3440 3424
             WIRE 3216 2656 4000 2656
             WIRE 3008 1776 3008 1872
             WIRE 3008 1776 3488 1776
@@ -446,9 +428,9 @@ BEGIN SCHEMATIC
             WIRE 3104 2192 3104 2208
             WIRE 2640 2192 2640 2560
             WIRE 2640 2560 2640 3040
-            WIRE 2640 3040 2640 3472
-            WIRE 2640 3472 3424 3472
             WIRE 2640 3040 3376 3040
+            WIRE 2640 3040 2640 3520
+            WIRE 2640 3520 3440 3520
             WIRE 2640 2560 2688 2560
             WIRE 2688 2560 2688 2608
             WIRE 3280 1840 3488 1840
@@ -499,7 +481,9 @@ BEGIN SCHEMATIC
             WIRE 3008 2064 3008 2400
         END BRANCH
         BEGIN BRANCH valid_data
-            WIRE 3808 3248 4192 3248
+            WIRE 3824 3296 4176 3296
+            WIRE 4176 3248 4192 3248
+            WIRE 4176 3248 4176 3296
         END BRANCH
         IOMARKER 1360 1664 firstword R180 28
         IOMARKER 1328 2128 lastword R180 28
@@ -511,5 +495,12 @@ BEGIN SCHEMATIC
         IOMARKER 2384 2576 rst R180 28
         IOMARKER 5312 2480 out_fifo(71:0) R0 28
         IOMARKER 4192 3248 valid_data R0 28
+        INSTANCE XLXI_12 3440 3552 R0
+        BEGIN BRANCH XLXN_15
+            WIRE 3136 2880 3168 2880
+            WIRE 3168 2880 3376 2880
+            WIRE 3168 2880 3168 3296
+            WIRE 3168 3296 3440 3296
+        END BRANCH
     END SHEET
 END SCHEMATIC

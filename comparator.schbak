@@ -23,27 +23,48 @@ BEGIN SCHEMATIC
         SIGNAL a(55:0)
         SIGNAL b(55:0)
         SIGNAL amask(6:0)
-        SIGNAL a(55:48)
-        SIGNAL b(55:48)
-        SIGNAL a(47:40)
-        SIGNAL b(47:40)
-        SIGNAL a(39:32)
-        SIGNAL b(39:32)
-        SIGNAL a(23:16)
-        SIGNAL b(23:16)
-        SIGNAL a(15:8)
-        SIGNAL b(31:24)
-        SIGNAL a(31:24)
-        SIGNAL b(7:0)
-        SIGNAL a(7:0)
-        SIGNAL b(15:8)
-        SIGNAL amask(6)
-        SIGNAL amask(5)
-        SIGNAL amask(4)
-        SIGNAL amask(3)
-        SIGNAL amask(2)
-        SIGNAL amask(1)
-        SIGNAL amask(0)
+        BEGIN SIGNAL a(55:48)
+        END SIGNAL
+        BEGIN SIGNAL b(55:48)
+        END SIGNAL
+        BEGIN SIGNAL a(47:40)
+        END SIGNAL
+        BEGIN SIGNAL b(47:40)
+        END SIGNAL
+        BEGIN SIGNAL a(39:32)
+        END SIGNAL
+        BEGIN SIGNAL b(39:32)
+        END SIGNAL
+        BEGIN SIGNAL a(23:16)
+        END SIGNAL
+        BEGIN SIGNAL b(23:16)
+        END SIGNAL
+        BEGIN SIGNAL a(15:8)
+        END SIGNAL
+        BEGIN SIGNAL b(31:24)
+        END SIGNAL
+        BEGIN SIGNAL a(31:24)
+        END SIGNAL
+        BEGIN SIGNAL b(7:0)
+        END SIGNAL
+        BEGIN SIGNAL a(7:0)
+        END SIGNAL
+        BEGIN SIGNAL b(15:8)
+        END SIGNAL
+        BEGIN SIGNAL amask(6)
+        END SIGNAL
+        BEGIN SIGNAL amask(5)
+        END SIGNAL
+        BEGIN SIGNAL amask(4)
+        END SIGNAL
+        BEGIN SIGNAL amask(3)
+        END SIGNAL
+        BEGIN SIGNAL amask(2)
+        END SIGNAL
+        BEGIN SIGNAL amask(1)
+        END SIGNAL
+        BEGIN SIGNAL amask(0)
+        END SIGNAL
         SIGNAL match
         PORT Input a(55:0)
         PORT Input b(55:0)

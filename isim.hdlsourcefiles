@@ -1,4 +1,5 @@
 C:/Xilinx/10.1/ISE/verilog/src/glbl.v
+C:/Xilinx/10.1/ISE/ISEexamples/lab3/generic_regs.v
 K:/IP0_K.14/env/Databases/ip/export/rtf/vhdl/src/XilinxCoreLib/blkmemdp_v6_3.vhd
 N:/K.31/rtf/verilog/src/unisims/FDC.v
 N:/K.31/rtf/verilog/src/unisims/VCC.v
@@ -9,5 +10,7 @@ C:/Xilinx/10.1/ISE/ISEexamples/lab3/wordmatch.vf
 N:/K.31/rtf/verilog/src/unisims/FDCE.v
 C:/Xilinx/10.1/ISE/ISEexamples/lab3/busmerge.v
 C:/Xilinx/10.1/ISE/ISEexamples/lab3/detect7B.vf
+C:/Xilinx/10.1/ISE/ISEexamples/lab3/small_fifo.v
+C:/Xilinx/10.1/ISE/ISEexamples/lab3/fallthrough_small_fifo_v2.v
 C:/Xilinx/10.1/ISE/ISEexamples/lab3/ids_sim.v
 C:/Xilinx/10.1/ISE/ISEexamples/lab3/ids_tb.vhw

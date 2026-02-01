@@ -2,3 +2,4 @@ sch2vhdl -intstyle ise -family virtex2p -flat -suppress -w "C:/Xilinx/10.1/ISE/I
 sch2verilog -intstyle ise -family virtex2p   -w "C:/Xilinx/10.1/ISE/ISEexamples/lab3/wordmatch.sch" wordmatch.vf
 sch2verilog -intstyle ise -family virtex2p   -w "C:/Xilinx/10.1/ISE/ISEexamples/lab3/wordmatch.sch" wordmatch.vf
 sch2verilog -intstyle ise -family virtex2p   -w "C:/Xilinx/10.1/ISE/ISEexamples/lab3/wordmatch.sch" wordmatch.vf
+sch2verilog -intstyle ise -family virtex2p   -w "C:/Xilinx/10.1/ISE/ISEexamples/lab3/wordmatch.sch" wordmatch.vf

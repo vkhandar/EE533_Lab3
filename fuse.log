@@ -1,8 +1,15 @@
 Determining compilation order of HDL files
 Analyzing Verilog file comparator.vf
 Analyzing Verilog file wordmatch.vf
+Analyzing Verilog file small_fifo.v
+WARNING:HDLCompiler:693 - "small_fifo.v" Line 36. Parameter declaration becomes
+   local in small_fifo with formal parameter declaration list
 Analyzing Verilog file reg9B.vf
 Analyzing Verilog file busmerge.v
+Analyzing Verilog file generic_regs.v
+WARNING:HDLCompiler:870 - "generic_regs.v" Line 160. Use of undefined macro
+   LOG2_FUNC
+Analyzing Verilog file fallthrough_small_fifo_v2.v
 Analyzing Verilog file dropfifo.vf
 Analyzing Verilog file detect7B.vf
 Analyzing Verilog file ids_sim.v
@@ -42,6 +49,8 @@ c:/xilinx/10.1/ise/iseexamples/lab3/isim/work/ipcore.vdb
 Saving VHDL parse-tree work.ids_tb into
 c:/xilinx/10.1/ise/iseexamples/lab3/isim/work/ids_tb.vdb
 Starting static elaboration
+WARNING:HDLCompiler:597 - "fallthrough_small_fifo_v2.v" Line 41. Module
+   small_fifo does not have a parameter named PROG_FULL_THRESHOLD
 Restoring Verilog parse-tree unisims_ver.FDCE from
 c:/xilinx/10.1/ise/verilog/hdp/nt/unisims_ver/unisims_ver.sdbl
 Restoring Verilog parse-tree unisims_ver.FMAP from
@@ -76,20 +85,26 @@ Restoring Verilog parse-tree unisims_ver.AND5 from
 c:/xilinx/10.1/ise/verilog/hdp/nt/unisims_ver/unisims_ver.sdbl
 Restoring Verilog parse-tree unisims_ver.FDC from
 c:/xilinx/10.1/ise/verilog/hdp/nt/unisims_ver/unisims_ver.sdbl
-WARNING:HDLCompiler:559 - "ids_sim.v" Line 112. Instantiating unknown module
-   fallthrough_small_fifo
 WARNING:HDLCompiler:321 -
    "K:/IP0_K.14/env/Databases/ip/export/rtf/vhdl/src/XilinxCoreLib/blkmemdp_v6_3
    .vhd" Line 383. Comparison between unequal length arrays always returns FALSE
 WARNING:HDLCompiler:919 - "dropfifo.vf" Line 589. Size mismatch in mixed
    language port association, vhdl port addra
-WARNING:HDLCompiler:559 - "ids_sim.v" Line 152. Instantiating unknown module
-   generic_regs
+WARNING:HDLCompiler:559 - "generic_regs.v" Line 248. Instantiating unknown
+   module generic_sw_regs
+WARNING:HDLCompiler:559 - "generic_regs.v" Line 289. Instantiating unknown
+   module generic_hw_regs
+WARNING:HDLCompiler:1016 - "ids_sim.v" Line 112. Port prog_full is not connected
+   to this instance
+WARNING:HDLCompiler:189 - "ids_sim.v" Line 180. Actual bit length 96 differs
+   from formal bit length 48 for port software_regs
+WARNING:HDLCompiler:189 - "ids_sim.v" Line 183. Actual bit length 32 differs
+   from formal bit length 16 for port hardware_regs
 WARNING:HDLCompiler:918 - "ids_tb.vhw" Line 86. Size mismatch in mixed language
    port association, verilog port in_data
 Completed static elaboration
 Fuse Memory Usage: 57224 Kb
-Fuse CPU Usage: 437 ms
+Fuse CPU Usage: 843 ms
 Using precompiled package standard from library std
 Using precompiled package textio from library std
 Using precompiled package std_logic_1164 from library ieee
@@ -98,6 +113,8 @@ Using precompiled package std_logic_arith from library ieee
 Using precompiled package std_logic_unsigned from library ieee
 Using precompiled package vital_timing from library ieee
 Compiling module glbl
+Compiling module small_fifo(WIDTH=72,MAX_DEPTH_BI...
+Compiling module fallthrough_small_fifo(WIDTH=72,...
 Compiling module busmerge
 Compiling module FDCE(INIT=1'b0)
 Compiling module FD8CE_MXILINX_reg9B
@@ -133,6 +150,7 @@ Compiling module FTCE_MXILINX_dropfifo
 Compiling module CB8CE_MXILINX_dropfifo
 Compiling module FDC(INIT=1'b0)
 Compiling module dropfifo
+Compiling module generic_regs(UDP_REG_SRC_WIDTH=2...
 Compiling module ids_sim
 Compiling package ul_utils
 Compiling package blkmemdp_mem_init_file_pack_v6_3
@@ -142,7 +160,7 @@ Compiling architecture behavioral of entity blkmemdp_v6_3
 Compiling architecture ipcore_a of entity ipcore
 Compiling architecture testbench_arch of entity ids_tb
 Compiled 15 VHDL Units
-Compiled 37 Verilog Units
+Compiled 40 Verilog Units
 Built simulation executable ids_tb_isim_beh.exe
 Fuse Memory Usage: 59532 Kb
-Fuse CPU Usage: 781 ms
+Fuse CPU Usage: 1281 ms

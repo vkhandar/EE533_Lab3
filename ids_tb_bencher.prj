@@ -1,0 +1,9 @@
+verilog work "comparator.vf"
+verilog work "wordmatch.vf"
+verilog work "reg9B.vf"
+vhdl work "ipcore.vhd"
+verilog work "busmerge.v"
+verilog work "dropfifo.vf"
+verilog work "detect7B.vf"
+verilog work "ids_sim.v"
+verilog work C:/Xilinx/10.1/ISE/verilog/src/glbl.v

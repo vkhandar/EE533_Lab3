@@ -7,7 +7,7 @@
 // \   \   \/     Version : 10.1
 //  \   \         Application : sch2verilog
 //  /   /         Filename : dropfifo.vf
-// /___/   /\     Timestamp : 01/31/2026 01:16:12
+// /___/   /\     Timestamp : 01/31/2026 20:59:58
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -18,6 +18,205 @@
 //    This verilog netlist is translated from an ECS schematic.It can be 
 //    synthesized and simulated, but it should not be modified. 
 //
+`timescale 1ns / 1ps
+
+module M2_1_MXILINX_dropfifo(D0, 
+                             D1, 
+                             S0, 
+                             O);
+
+    input D0;
+    input D1;
+    input S0;
+   output O;
+   
+   wire M0;
+   wire M1;
+   
+   AND2B1 I_36_7 (.I0(S0), 
+                  .I1(D0), 
+                  .O(M0));
+   OR2 I_36_8 (.I0(M1), 
+               .I1(M0), 
+               .O(O));
+   AND2 I_36_9 (.I0(D1), 
+                .I1(S0), 
+                .O(M1));
+endmodule
+`timescale 1ns / 1ps
+
+module FTCLEX_MXILINX_dropfifo(C, 
+                               CE, 
+                               CLR, 
+                               D, 
+                               L, 
+                               T, 
+                               Q);
+
+    input C;
+    input CE;
+    input CLR;
+    input D;
+    input L;
+    input T;
+   output Q;
+   
+   wire MD;
+   wire TQ;
+   wire Q_DUMMY;
+   
+   assign Q = Q_DUMMY;
+   M2_1_MXILINX_dropfifo I_36_30 (.D0(TQ), 
+                                  .D1(D), 
+                                  .S0(L), 
+                                  .O(MD));
+   // synthesis attribute HU_SET of I_36_30 is "I_36_30_0"
+   XOR2 I_36_32 (.I0(T), 
+                 .I1(Q_DUMMY), 
+                 .O(TQ));
+   FDCE I_36_35 (.C(C), 
+                 .CE(CE), 
+                 .CLR(CLR), 
+                 .D(MD), 
+                 .Q(Q_DUMMY));
+   // synthesis attribute RLOC of I_36_35 is "X0Y0"
+   defparam I_36_35.INIT = 1'b0;
+endmodule
+`timescale 1ns / 1ps
+
+module CB8CLE_MXILINX_dropfifo(C, 
+                               CE, 
+                               CLR, 
+                               D, 
+                               L, 
+                               CEO, 
+                               Q, 
+                               TC);
+
+    input C;
+    input CE;
+    input CLR;
+    input [7:0] D;
+    input L;
+   output CEO;
+   output [7:0] Q;
+   output TC;
+   
+   wire OR_CE_L;
+   wire T2;
+   wire T3;
+   wire T4;
+   wire T5;
+   wire T6;
+   wire T7;
+   wire XLXN_1;
+   wire [7:0] Q_DUMMY;
+   wire TC_DUMMY;
+   
+   assign Q[7:0] = Q_DUMMY[7:0];
+   assign TC = TC_DUMMY;
+   FTCLEX_MXILINX_dropfifo I_Q0 (.C(C), 
+                                 .CE(OR_CE_L), 
+                                 .CLR(CLR), 
+                                 .D(D[0]), 
+                                 .L(L), 
+                                 .T(XLXN_1), 
+                                 .Q(Q_DUMMY[0]));
+   // synthesis attribute HU_SET of I_Q0 is "I_Q0_1"
+   FTCLEX_MXILINX_dropfifo I_Q1 (.C(C), 
+                                 .CE(OR_CE_L), 
+                                 .CLR(CLR), 
+                                 .D(D[1]), 
+                                 .L(L), 
+                                 .T(Q_DUMMY[0]), 
+                                 .Q(Q_DUMMY[1]));
+   // synthesis attribute HU_SET of I_Q1 is "I_Q1_2"
+   FTCLEX_MXILINX_dropfifo I_Q2 (.C(C), 
+                                 .CE(OR_CE_L), 
+                                 .CLR(CLR), 
+                                 .D(D[2]), 
+                                 .L(L), 
+                                 .T(T2), 
+                                 .Q(Q_DUMMY[2]));
+   // synthesis attribute HU_SET of I_Q2 is "I_Q2_3"
+   FTCLEX_MXILINX_dropfifo I_Q3 (.C(C), 
+                                 .CE(OR_CE_L), 
+                                 .CLR(CLR), 
+                                 .D(D[3]), 
+                                 .L(L), 
+                                 .T(T3), 
+                                 .Q(Q_DUMMY[3]));
+   // synthesis attribute HU_SET of I_Q3 is "I_Q3_4"
+   FTCLEX_MXILINX_dropfifo I_Q4 (.C(C), 
+                                 .CE(OR_CE_L), 
+                                 .CLR(CLR), 
+                                 .D(D[4]), 
+                                 .L(L), 
+                                 .T(T4), 
+                                 .Q(Q_DUMMY[4]));
+   // synthesis attribute HU_SET of I_Q4 is "I_Q4_5"
+   FTCLEX_MXILINX_dropfifo I_Q5 (.C(C), 
+                                 .CE(OR_CE_L), 
+                                 .CLR(CLR), 
+                                 .D(D[5]), 
+                                 .L(L), 
+                                 .T(T5), 
+                                 .Q(Q_DUMMY[5]));
+   // synthesis attribute HU_SET of I_Q5 is "I_Q5_6"
+   FTCLEX_MXILINX_dropfifo I_Q6 (.C(C), 
+                                 .CE(OR_CE_L), 
+                                 .CLR(CLR), 
+                                 .D(D[6]), 
+                                 .L(L), 
+                                 .T(T6), 
+                                 .Q(Q_DUMMY[6]));
+   // synthesis attribute HU_SET of I_Q6 is "I_Q6_7"
+   FTCLEX_MXILINX_dropfifo I_Q7 (.C(C), 
+                                 .CE(OR_CE_L), 
+                                 .CLR(CLR), 
+                                 .D(D[7]), 
+                                 .L(L), 
+                                 .T(T7), 
+                                 .Q(Q_DUMMY[7]));
+   // synthesis attribute HU_SET of I_Q7 is "I_Q7_8"
+   AND3 I_36_8 (.I0(Q_DUMMY[5]), 
+                .I1(Q_DUMMY[4]), 
+                .I2(T4), 
+                .O(T6));
+   AND2 I_36_11 (.I0(Q_DUMMY[4]), 
+                 .I1(T4), 
+                 .O(T5));
+   VCC I_36_12 (.P(XLXN_1));
+   AND2 I_36_19 (.I0(Q_DUMMY[1]), 
+                 .I1(Q_DUMMY[0]), 
+                 .O(T2));
+   AND3 I_36_21 (.I0(Q_DUMMY[2]), 
+                 .I1(Q_DUMMY[1]), 
+                 .I2(Q_DUMMY[0]), 
+                 .O(T3));
+   AND4 I_36_23 (.I0(Q_DUMMY[3]), 
+                 .I1(Q_DUMMY[2]), 
+                 .I2(Q_DUMMY[1]), 
+                 .I3(Q_DUMMY[0]), 
+                 .O(T4));
+   AND4 I_36_25 (.I0(Q_DUMMY[6]), 
+                 .I1(Q_DUMMY[5]), 
+                 .I2(Q_DUMMY[4]), 
+                 .I3(T4), 
+                 .O(T7));
+   AND5 I_36_29 (.I0(Q_DUMMY[7]), 
+                 .I1(Q_DUMMY[6]), 
+                 .I2(Q_DUMMY[5]), 
+                 .I3(Q_DUMMY[4]), 
+                 .I4(T4), 
+                 .O(TC_DUMMY));
+   AND2 I_36_33 (.I0(CE), 
+                 .I1(TC_DUMMY), 
+                 .O(CEO));
+   OR2 I_36_49 (.I0(CE), 
+                .I1(L), 
+                .O(OR_CE_L));
+endmodule
 `timescale 1ns / 1ps
 
 module FTCE_MXILINX_dropfifo(C, 
@@ -80,49 +279,49 @@ module CB8CE_MXILINX_dropfifo(C,
                                .CLR(CLR), 
                                .T(XLXN_1), 
                                .Q(Q_DUMMY[0]));
-   // synthesis attribute HU_SET of I_Q0 is "I_Q0_6"
+   // synthesis attribute HU_SET of I_Q0 is "I_Q0_15"
    FTCE_MXILINX_dropfifo I_Q1 (.C(C), 
                                .CE(CE), 
                                .CLR(CLR), 
                                .T(Q_DUMMY[0]), 
                                .Q(Q_DUMMY[1]));
-   // synthesis attribute HU_SET of I_Q1 is "I_Q1_7"
+   // synthesis attribute HU_SET of I_Q1 is "I_Q1_16"
    FTCE_MXILINX_dropfifo I_Q2 (.C(C), 
                                .CE(CE), 
                                .CLR(CLR), 
                                .T(T2), 
                                .Q(Q_DUMMY[2]));
-   // synthesis attribute HU_SET of I_Q2 is "I_Q2_3"
+   // synthesis attribute HU_SET of I_Q2 is "I_Q2_12"
    FTCE_MXILINX_dropfifo I_Q3 (.C(C), 
                                .CE(CE), 
                                .CLR(CLR), 
                                .T(T3), 
                                .Q(Q_DUMMY[3]));
-   // synthesis attribute HU_SET of I_Q3 is "I_Q3_4"
+   // synthesis attribute HU_SET of I_Q3 is "I_Q3_13"
    FTCE_MXILINX_dropfifo I_Q4 (.C(C), 
                                .CE(CE), 
                                .CLR(CLR), 
                                .T(T4), 
                                .Q(Q_DUMMY[4]));
-   // synthesis attribute HU_SET of I_Q4 is "I_Q4_5"
+   // synthesis attribute HU_SET of I_Q4 is "I_Q4_14"
    FTCE_MXILINX_dropfifo I_Q5 (.C(C), 
                                .CE(CE), 
                                .CLR(CLR), 
                                .T(T5), 
                                .Q(Q_DUMMY[5]));
-   // synthesis attribute HU_SET of I_Q5 is "I_Q5_2"
+   // synthesis attribute HU_SET of I_Q5 is "I_Q5_11"
    FTCE_MXILINX_dropfifo I_Q6 (.C(C), 
                                .CE(CE), 
                                .CLR(CLR), 
                                .T(T6), 
                                .Q(Q_DUMMY[6]));
-   // synthesis attribute HU_SET of I_Q6 is "I_Q6_1"
+   // synthesis attribute HU_SET of I_Q6 is "I_Q6_10"
    FTCE_MXILINX_dropfifo I_Q7 (.C(C), 
                                .CE(CE), 
                                .CLR(CLR), 
                                .T(T7), 
                                .Q(Q_DUMMY[7]));
-   // synthesis attribute HU_SET of I_Q7 is "I_Q7_0"
+   // synthesis attribute HU_SET of I_Q7 is "I_Q7_9"
    AND5 I_36_1 (.I0(Q_DUMMY[7]), 
                 .I1(Q_DUMMY[6]), 
                 .I2(Q_DUMMY[5]), 
@@ -157,205 +356,6 @@ module CB8CE_MXILINX_dropfifo(C,
    AND2 I_36_31 (.I0(CE), 
                  .I1(TC_DUMMY), 
                  .O(CEO));
-endmodule
-`timescale 1ns / 1ps
-
-module M2_1_MXILINX_dropfifo(D0, 
-                             D1, 
-                             S0, 
-                             O);
-
-    input D0;
-    input D1;
-    input S0;
-   output O;
-   
-   wire M0;
-   wire M1;
-   
-   AND2B1 I_36_7 (.I0(S0), 
-                  .I1(D0), 
-                  .O(M0));
-   OR2 I_36_8 (.I0(M1), 
-               .I1(M0), 
-               .O(O));
-   AND2 I_36_9 (.I0(D1), 
-                .I1(S0), 
-                .O(M1));
-endmodule
-`timescale 1ns / 1ps
-
-module FTCLEX_MXILINX_dropfifo(C, 
-                               CE, 
-                               CLR, 
-                               D, 
-                               L, 
-                               T, 
-                               Q);
-
-    input C;
-    input CE;
-    input CLR;
-    input D;
-    input L;
-    input T;
-   output Q;
-   
-   wire MD;
-   wire TQ;
-   wire Q_DUMMY;
-   
-   assign Q = Q_DUMMY;
-   M2_1_MXILINX_dropfifo I_36_30 (.D0(TQ), 
-                                  .D1(D), 
-                                  .S0(L), 
-                                  .O(MD));
-   // synthesis attribute HU_SET of I_36_30 is "I_36_30_8"
-   XOR2 I_36_32 (.I0(T), 
-                 .I1(Q_DUMMY), 
-                 .O(TQ));
-   FDCE I_36_35 (.C(C), 
-                 .CE(CE), 
-                 .CLR(CLR), 
-                 .D(MD), 
-                 .Q(Q_DUMMY));
-   // synthesis attribute RLOC of I_36_35 is "X0Y0"
-   defparam I_36_35.INIT = 1'b0;
-endmodule
-`timescale 1ns / 1ps
-
-module CB8CLE_MXILINX_dropfifo(C, 
-                               CE, 
-                               CLR, 
-                               D, 
-                               L, 
-                               CEO, 
-                               Q, 
-                               TC);
-
-    input C;
-    input CE;
-    input CLR;
-    input [7:0] D;
-    input L;
-   output CEO;
-   output [7:0] Q;
-   output TC;
-   
-   wire OR_CE_L;
-   wire T2;
-   wire T3;
-   wire T4;
-   wire T5;
-   wire T6;
-   wire T7;
-   wire XLXN_1;
-   wire [7:0] Q_DUMMY;
-   wire TC_DUMMY;
-   
-   assign Q[7:0] = Q_DUMMY[7:0];
-   assign TC = TC_DUMMY;
-   FTCLEX_MXILINX_dropfifo I_Q0 (.C(C), 
-                                 .CE(OR_CE_L), 
-                                 .CLR(CLR), 
-                                 .D(D[0]), 
-                                 .L(L), 
-                                 .T(XLXN_1), 
-                                 .Q(Q_DUMMY[0]));
-   // synthesis attribute HU_SET of I_Q0 is "I_Q0_9"
-   FTCLEX_MXILINX_dropfifo I_Q1 (.C(C), 
-                                 .CE(OR_CE_L), 
-                                 .CLR(CLR), 
-                                 .D(D[1]), 
-                                 .L(L), 
-                                 .T(Q_DUMMY[0]), 
-                                 .Q(Q_DUMMY[1]));
-   // synthesis attribute HU_SET of I_Q1 is "I_Q1_10"
-   FTCLEX_MXILINX_dropfifo I_Q2 (.C(C), 
-                                 .CE(OR_CE_L), 
-                                 .CLR(CLR), 
-                                 .D(D[2]), 
-                                 .L(L), 
-                                 .T(T2), 
-                                 .Q(Q_DUMMY[2]));
-   // synthesis attribute HU_SET of I_Q2 is "I_Q2_11"
-   FTCLEX_MXILINX_dropfifo I_Q3 (.C(C), 
-                                 .CE(OR_CE_L), 
-                                 .CLR(CLR), 
-                                 .D(D[3]), 
-                                 .L(L), 
-                                 .T(T3), 
-                                 .Q(Q_DUMMY[3]));
-   // synthesis attribute HU_SET of I_Q3 is "I_Q3_12"
-   FTCLEX_MXILINX_dropfifo I_Q4 (.C(C), 
-                                 .CE(OR_CE_L), 
-                                 .CLR(CLR), 
-                                 .D(D[4]), 
-                                 .L(L), 
-                                 .T(T4), 
-                                 .Q(Q_DUMMY[4]));
-   // synthesis attribute HU_SET of I_Q4 is "I_Q4_13"
-   FTCLEX_MXILINX_dropfifo I_Q5 (.C(C), 
-                                 .CE(OR_CE_L), 
-                                 .CLR(CLR), 
-                                 .D(D[5]), 
-                                 .L(L), 
-                                 .T(T5), 
-                                 .Q(Q_DUMMY[5]));
-   // synthesis attribute HU_SET of I_Q5 is "I_Q5_14"
-   FTCLEX_MXILINX_dropfifo I_Q6 (.C(C), 
-                                 .CE(OR_CE_L), 
-                                 .CLR(CLR), 
-                                 .D(D[6]), 
-                                 .L(L), 
-                                 .T(T6), 
-                                 .Q(Q_DUMMY[6]));
-   // synthesis attribute HU_SET of I_Q6 is "I_Q6_15"
-   FTCLEX_MXILINX_dropfifo I_Q7 (.C(C), 
-                                 .CE(OR_CE_L), 
-                                 .CLR(CLR), 
-                                 .D(D[7]), 
-                                 .L(L), 
-                                 .T(T7), 
-                                 .Q(Q_DUMMY[7]));
-   // synthesis attribute HU_SET of I_Q7 is "I_Q7_16"
-   AND3 I_36_8 (.I0(Q_DUMMY[5]), 
-                .I1(Q_DUMMY[4]), 
-                .I2(T4), 
-                .O(T6));
-   AND2 I_36_11 (.I0(Q_DUMMY[4]), 
-                 .I1(T4), 
-                 .O(T5));
-   VCC I_36_12 (.P(XLXN_1));
-   AND2 I_36_19 (.I0(Q_DUMMY[1]), 
-                 .I1(Q_DUMMY[0]), 
-                 .O(T2));
-   AND3 I_36_21 (.I0(Q_DUMMY[2]), 
-                 .I1(Q_DUMMY[1]), 
-                 .I2(Q_DUMMY[0]), 
-                 .O(T3));
-   AND4 I_36_23 (.I0(Q_DUMMY[3]), 
-                 .I1(Q_DUMMY[2]), 
-                 .I2(Q_DUMMY[1]), 
-                 .I3(Q_DUMMY[0]), 
-                 .O(T4));
-   AND4 I_36_25 (.I0(Q_DUMMY[6]), 
-                 .I1(Q_DUMMY[5]), 
-                 .I2(Q_DUMMY[4]), 
-                 .I3(T4), 
-                 .O(T7));
-   AND5 I_36_29 (.I0(Q_DUMMY[7]), 
-                 .I1(Q_DUMMY[6]), 
-                 .I2(Q_DUMMY[5]), 
-                 .I3(Q_DUMMY[4]), 
-                 .I4(T4), 
-                 .O(TC_DUMMY));
-   AND2 I_36_33 (.I0(CE), 
-                 .I1(TC_DUMMY), 
-                 .O(CEO));
-   OR2 I_36_49 (.I0(CE), 
-                .I1(L), 
-                .O(OR_CE_L));
 endmodule
 `timescale 1ns / 1ps
 
@@ -504,6 +504,7 @@ module dropfifo(clk,
    output [71:0] out_fifo;
    output valid_data;
    
+   wire [71:0] in_fifo0;
    wire [7:0] raddr;
    wire [7:0] waddr;
    wire XLXN_1;
@@ -514,7 +515,6 @@ module dropfifo(clk,
    wire XLXN_15;
    wire [7:0] XLXN_16;
    wire XLXN_18;
-   wire [71:0] XLXN_32;
    wire XLXN_35;
    wire XLXN_36;
    wire XLXN_37;
@@ -563,14 +563,14 @@ module dropfifo(clk,
                                     .CEO(), 
                                     .Q(waddr[7:0]), 
                                     .TC());
-   // synthesis attribute HU_SET of XLXI_10 is "XLXI_10_20"
+   // synthesis attribute HU_SET of XLXI_10 is "XLXI_10_21"
    CB8CE_MXILINX_dropfifo XLXI_11 (.C(clk), 
                                    .CE(XLXN_15), 
                                    .CLR(rst), 
                                    .CEO(), 
                                    .Q(raddr[7:0]), 
                                    .TC());
-   // synthesis attribute HU_SET of XLXI_11 is "XLXI_11_21"
+   // synthesis attribute HU_SET of XLXI_11 is "XLXI_11_20"
    FDC XLXI_12 (.C(clk), 
                 .CLR(rst), 
                 .D(XLXN_15), 
@@ -580,7 +580,7 @@ module dropfifo(clk,
                   .clk(clk), 
                   .clr(rst), 
                   .d(in_fifo[71:0]), 
-                  .q(XLXN_32[71:0]));
+                  .q(in_fifo0[71:0]));
    VCC XLXI_14 (.P(XLXN_18));
    FD XLXI_15 (.C(clk), 
                .D(drop_pkt), 
@@ -590,7 +590,7 @@ module dropfifo(clk,
                    .addrb(raddr[7:0]), 
                    .clka(clk), 
                    .clkb(clk), 
-                   .dina(XLXN_32[71:0]), 
+                   .dina(in_fifo0[71:0]), 
                    .wea(XLXN_35), 
                    .doutb(out_fifo[71:0]));
 endmodule
